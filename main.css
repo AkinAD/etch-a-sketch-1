@@ -1,3 +1,16 @@
 /*
   Main style sheet
 */
+
+body {
+  text-align: center;
+  background: lightgrey;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  border: 2px solid black;
+  height: 600px;
+  width: 600px;
+  margin: 20px auto;
+}
