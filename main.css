@@ -21,11 +21,22 @@ h1 {
   height: 600px;
   width: 600px;
   margin: 20px auto;
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
 }
+
 
 .btn {
   margin-top: 25px;
   padding: 15px;
   width: 25%;
+}
+
+.pixel {
+  margin: 0;
+  padding: 0;
+  border: 1px solid grey;
 }
