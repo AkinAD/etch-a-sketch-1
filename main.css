@@ -30,7 +30,6 @@ h1 {
   */
 
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
   align-content: start;
   overflow: hidden;
 }
@@ -46,7 +45,5 @@ h1 {
   margin: 0;
   padding: 0;
   border: 1px solid grey;
-  align-self: start;
-  width: 30px;
-  height: 30px;
+  align-self: start
 }
