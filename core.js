@@ -10,9 +10,10 @@ const gridContainer = document.querySelector('.grid-container')
 
 // FUNCTIONS
 
-function createGrid (gridSize) {
+function createGrid () {
   let i
   let gridPixel
+  let gridSize = prompt('Enter the size of grid you want!')
 
   gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
 
@@ -23,3 +24,6 @@ function createGrid (gridSize) {
     gridContainer.appendChild(gridPixel)
   }
 }
+
+// ON LOAD
+window.onLoad(createGrid())
