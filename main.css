@@ -21,11 +21,18 @@ h1 {
   height: 600px;
   width: 600px;
   margin: 20px auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
 
+  /* INITIAL FLEX IMPLEMENTATION
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  */
+
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  align-content: start;
+  overflow: hidden;
 }
 
 
@@ -39,4 +46,7 @@ h1 {
   margin: 0;
   padding: 0;
   border: 1px solid grey;
+  align-self: start;
+  width: 30px;
+  height: 30px;
 }
