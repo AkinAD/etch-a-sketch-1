@@ -6,7 +6,7 @@ const gridContainer = document.querySelector('.grid-container')
 
 // EVENT LISTENERS
 
-
+createClearBtn.addEventListener('click', createGrid)
 
 // FUNCTIONS
 
@@ -24,6 +24,3 @@ function createGrid () {
     gridContainer.appendChild(gridPixel)
   }
 }
-
-// ON LOAD
-window.onLoad(createGrid())
