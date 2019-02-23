@@ -7,10 +7,13 @@ var pixelList
 // EVENT LISTENERS
 
 createClearBtn.addEventListener('click', createGrid)
+colorBtn.addEventListener('click', randomColorListener)
 
 // FUNCTION
-function addListener (i) {
-  i.addEventListener('mouseover', function (event) {event.target.classList.add('permhover')})
+function addListener (e) {
+  e.addEventListener('mouseover', function (event) {
+    event.target.classList.add('permhover')
+  })
 }
 
 function createGrid () {
@@ -34,4 +37,17 @@ function createGrid () {
       gridContainer.removeChild(gridContainer.firstChild)
     }
   }
+}
+
+function getRandomColor () {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16)
+}
+
+function randomColorListener () {
+  function addColorListener (e) {
+    e.addEventListener('mouseover', function (event) {
+      event.target.style.backgroundColor = getRandomColor()
+    })
+  }
+  pixelList.forEach(addColorListener)
 }
