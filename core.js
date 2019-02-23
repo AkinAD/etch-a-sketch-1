@@ -3,14 +3,17 @@
 const createClearBtn = document.querySelector('#create-clear')
 const colorBtn = document.querySelector('#color')
 const gridContainer = document.querySelector('.grid-container')
-
+var pixelList
 // EVENT LISTENERS
 
 createClearBtn.addEventListener('click', createGrid)
 
-// FUNCTIONS
+// FUNCTION
+function addListener (i) {
+  i.addEventListener('mouseover', function (event) {event.target.classList.add('permhover')})
+}
 
-function createGrid() {
+function createGrid () {
   if (!gridContainer.hasChildNodes()) {
     let i
     let gridPixel
@@ -24,6 +27,8 @@ function createGrid() {
       gridPixel.classList.add('pixel')
       gridContainer.appendChild(gridPixel)
     }
+    pixelList = document.querySelectorAll('.pixel')
+    pixelList.forEach(addListener)
   } else {
     while (gridContainer.firstChild) {
       gridContainer.removeChild(gridContainer.firstChild)
