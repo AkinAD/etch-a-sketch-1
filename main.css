@@ -48,6 +48,6 @@ h1 {
   align-self: start
 }
 
-.pixel:hover {
+.permhover {
   background-color: black;
 }
